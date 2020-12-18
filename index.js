@@ -102,6 +102,7 @@ class FileTreeSelectionPrompt extends Base {
         this.active = this.fileTree.children[0];
       } else {
         this.active = rootNode.children[0];
+        this.prepareChildren(this.active);
       }
       this.render();
     }
