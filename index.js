@@ -220,6 +220,10 @@ class FileTreeSelectionPrompt extends Base {
       await addValidity(node);
     }
 
+    if (this.opt.sort) {
+        node.children.sort(this.opt.sort);
+    }
+
     !node._rootNode && this.render();
   }
 
